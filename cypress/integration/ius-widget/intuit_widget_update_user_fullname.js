@@ -23,4 +23,9 @@ describe("Intuit update user full name where full name already present",()=>{
         //should still be disabled
         cy.get("#ius-fullname-manager-btn-submit").should("be.disabled")
     })
+    it("Do update cannot update only last name",()=>{
+        cy.get("#ius-last-name").type("testpass")
+        //should still be disabled
+        cy.get("#ius-fullname-manager-btn-submit").should("be.disabled")
+    })
     })
